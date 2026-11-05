@@ -1,0 +1,3 @@
+# Cloud installs the package and its UI extra from this checkout.
+-c constraints-cloud.txt
+.[ui]

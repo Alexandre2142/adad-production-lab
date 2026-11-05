@@ -204,3 +204,20 @@ validation des bornes, préservation du schéma et des WAV synthétiques, envelo
 conflits de sauvegarde, échec du remplacement atomique, puis scénarios Streamlit `AppTest`
 de saisie, changement de piste, sauvegarde, rechargement et génération du rapport.
 Sans Streamlit installé, seuls les deux tests AppTest sont ignorés.
+
+## Préparation Streamlit Community Cloud
+
+L’entrée locale reste `streamlit_app.py`. L’entrée cloud dédiée est
+`cloud/streamlit_app.py` : uploads limités, annotations en mémoire de session,
+export JSON et téléchargement du rapport ZIP, sans données personnelles préchargées.
+Ne pas déployer l’interface locale partagée sur Cloud.
+
+La cible cloud est **Python 3.14** avec `requirements.txt` et `constraints-cloud.txt`.
+Les configurations réseau sont distinctes : loopback local, écoute du proxy cloud.
+Le schéma des annotations et la CLI restent inchangés. Les données cloud sont
+éphémères ; télécharger ses annotations pour les conserver.
+
+Voir [le guide de déploiement, l’architecture et les risques](docs/streamlit-cloud.md)
+pour les étapes, limites d’upload et précautions avant fusion. Rien n’est publié
+ou fusionné automatiquement. Pour les données sensibles, utiliser le mode local
+ou l’architecture à stockage privé et workers isolés décrite dans ce guide.

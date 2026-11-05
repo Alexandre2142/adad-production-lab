@@ -16,3 +16,12 @@ reports/
 .env
 .env.*
 !.env.example
+# Private working data (including annotation lock/temp files).
+annotations/
+lyrics/
+prompts/
+uploads/
+*.zip
+*.pem
+*.key
+**/secrets.toml

@@ -1,0 +1,13 @@
+[server]
+address = "0.0.0.0"
+headless = true
+maxUploadSize = 50
+enableStaticServing = false
+enableXsrfProtection = true
+enableCORS = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = "none"
