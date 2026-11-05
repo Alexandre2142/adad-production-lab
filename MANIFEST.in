@@ -1,0 +1,7 @@
+prune audio
+prune annotations
+prune reports
+prune lyrics
+prune prompts
+prune uploads
+global-exclude *.wav *.mp3 *.flac *.pem *.key secrets.toml .env .env.*
